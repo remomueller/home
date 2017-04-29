@@ -1,0 +1,21 @@
+.items-header {
+  display: flex;
+}
+
+.items-header-cell {
+  flex: 1;
+  font-weight: bold;
+  text-align: center;
+}
+
+.item-row {
+  background-color: $gray-lightest;
+  display: flex;
+}
+
+.item-cell {
+  border-radius: 0;
+  flex: 1;
+  display: inline-block;
+  width: initial;
+}

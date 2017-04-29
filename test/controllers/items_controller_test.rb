@@ -25,11 +25,18 @@ class ItemsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should create item" do
-    assert_difference('Item.count') do
+    assert_difference("Item.count") do
       post items_url, params: { item: item_params }
     end
 
     assert_redirected_to item_url(Item.last)
+  end
+
+  test "should add row" do
+    assert_difference("Item.count") do
+      post add_row_items_url(format: 'js')
+    end
+    assert_response :success
   end
 
   test "should show item" do
@@ -45,6 +52,11 @@ class ItemsControllerTest < ActionDispatch::IntegrationTest
   test "should update item" do
     patch item_url(@item), params: { item: item_params }
     assert_redirected_to item_url(@item)
+  end
+
+  test "should update cell" do
+    patch update_cell_item_url(@item, format: 'js'), params: { item: item_params }
+    assert_response :success
   end
 
   test "should destroy item" do

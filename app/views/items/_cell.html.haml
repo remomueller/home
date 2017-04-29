@@ -1,0 +1,5 @@
+.item-row
+  = text_field_tag :box, item.box, class: 'form-control item-cell', data: { object: 'save-item-cell', item: item.id }
+  = text_field_tag :name, item.name, class: 'form-control item-cell', data: { object: 'save-item-cell', item: item.id }
+  = text_field_tag :location, item.location, class: 'form-control item-cell', data: { object: 'save-item-cell', item: item.id }
+  = text_field_tag :description, item.description, class: 'form-control item-cell', data: { object: 'save-item-cell', item: item.id }

@@ -1,0 +1,13 @@
+%h1.display-1 Spreadsheet
+
+= link_to 'Add Item', add_row_items_path, method: :post, remote: true, class: 'btn btn-primary'
+
+.items-header
+  .items-header-cell Box
+  .items-header-cell Name
+  .items-header-cell Location
+  .items-header-cell Description
+
+#items
+  - @items.each do |item|
+    = render 'items/cell', item: item

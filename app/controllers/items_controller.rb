@@ -1,10 +1,23 @@
 class ItemsController < ApplicationController
-  before_action :find_item_or_redirect, only: [:show, :edit, :update, :destroy]
+  before_action :find_item_or_redirect, only: [
+    :show, :edit, :update, :destroy, :update_cell
+  ]
 
   # GET /items
   # GET /items.json
   def index
     @items = Item.all
+  end
+
+  # GET /items/spreadsheet
+  # GET /items/spreadsheet.json
+  def spreadsheet
+    @items = Item.all.order(id: :desc)
+  end
+
+  # POST /items/add_row.js
+  def add_row
+    @item = Item.create
   end
 
   # # GET /items/1
@@ -37,8 +50,8 @@ class ItemsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /items/1
-  # PATCH/PUT /items/1.json
+  # PATCH /items/1
+  # PATCH /items/1.json
   def update
     respond_to do |format|
       if @item.update(item_params)
@@ -47,6 +60,17 @@ class ItemsController < ApplicationController
       else
         format.html { render :edit }
         format.json { render json: @item.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  # PATCH /items/1.js
+  def update_cell
+    respond_to do |format|
+      if @item.update(item_params)
+        format.js
+      else
+        format.js
       end
     end
   end
