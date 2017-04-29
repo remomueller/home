@@ -1,0 +1,17 @@
+%h1.display-1= @item.name
+
+%p
+  %strong Box:
+  = @item.box
+
+%p
+  %strong Location:
+  = @item.location
+
+%p
+  %strong Description:
+  = @item.description
+
+= link_to 'Edit', edit_item_path(@item)
+|
+= link_to 'Back', items_path

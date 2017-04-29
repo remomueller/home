@@ -9,7 +9,7 @@ gem 'pg',                   '0.20.0'
 
 # Gems used by project
 gem 'autoprefixer-rails'
-gem 'bootstrap-sass',       '~> 3.3.7'
+gem 'bootstrap',            '~> 4.0.0.alpha6'
 gem 'figaro',               '~> 1.1.1'
 gem 'haml',                 '~> 5.0.0.beta.2'
 

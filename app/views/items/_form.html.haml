@@ -1,0 +1,21 @@
+= form_with(model: item, local: true) do |form|
+  .form-group
+    = form.label :box
+    = form.text_field :box, id: :item_box, class: 'form-control'
+
+  .form-group
+    = form.label :name
+    = form.text_field :name, id: :item_name, class: 'form-control'
+
+  .form-group
+    = form.label :location
+    = form.text_field :location, id: :item_location, class: 'form-control'
+
+  .form-group
+    = form.label :description
+    = form.text_area :description, id: :item_description, class: 'form-control'
+
+  .form-group
+    = form.submit nil, class: 'btn btn-primary'
+    or
+    = link_to 'cancel', item.new_record? ? items_path : item

@@ -1,0 +1,11 @@
+one:
+  box: 1A
+  name: Kitchen Scissors
+  location: Kitchen
+  description: The big red ones
+
+two:
+  box: 1A
+  name: Soup Ladle
+  location: Kitchen
+  description: For awesome soups
