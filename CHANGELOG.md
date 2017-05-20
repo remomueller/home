@@ -9,3 +9,5 @@
     - `description`: Additional text to help find the item when searching for item
   - Updated cells in spreadsheet now indicate if they were saved successfully or
     not
+- **Gem Changes**
+  - Updated to haml 5.0.1

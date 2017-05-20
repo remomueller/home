@@ -11,7 +11,7 @@ gem 'pg',                   '0.20.0'
 gem 'autoprefixer-rails'
 gem 'bootstrap',            '~> 4.0.0.alpha6'
 gem 'figaro',               '~> 1.1.1'
-gem 'haml',                 '~> 5.0.0.beta.2'
+gem 'haml',                 '~> 5.0.1'
 
 # Rails Defaults
 gem 'coffee-rails',         '~> 4.2'
