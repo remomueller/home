@@ -18,4 +18,26 @@
   flex: 1;
   display: inline-block;
   width: initial;
+
+  &.item-cell-saved {
+    background-color: $p50-green;
+    animation: fadeGreen 1s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+
+  &.item-cell-failed {
+    background-color: $p50-red;
+    border-color: $p500-red;
+  }
 }
+
+@keyframes fadeGreen {
+  0% {
+    background-color: $p50-green;
+  }
+
+  100% {
+    background-color: $brand-white;
+  }
+}
+
