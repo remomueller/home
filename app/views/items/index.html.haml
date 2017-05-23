@@ -1,4 +1,10 @@
-%h1.display-1 Items
+%h1.display-1
+  Items
+  = render 'search/toggle'
+= link_to 'Spreadsheet', spreadsheet_items_path
+= link_to 'New Item', new_item_path
+
+= render 'search/simple', url: items_path
 
 %table.table
   %thead
@@ -20,7 +26,4 @@
         %td= link_to 'Edit', edit_item_path(item)
         %td= link_to 'Destroy', item, method: :delete, data: { confirm: "Delete #{item.name}?" }
 
-%br
-
-= link_to 'New Item', new_item_path
-= link_to 'Spreadsheet', spreadsheet_items_path
+.center= paginate @items, theme: "bootstrap"

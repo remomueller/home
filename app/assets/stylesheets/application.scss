@@ -3,6 +3,9 @@
 @import 'variables/all';
 @import 'bootstrap';
 
+// App Mixins
+@import 'mixins/all';
+
 // App specific styles
 @import 'components/all';
 @import 'objects/all';

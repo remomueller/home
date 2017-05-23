@@ -11,6 +11,7 @@
     - `description`: Additional text to help find the item when searching for item
   - Updated cells in spreadsheet now indicate if they were saved successfully or
     not
+  - Items can now be searched on items index
 - **Gem Changes**
   - Updated to rails 5.1.1
   - Updated to haml 5.0.1

@@ -6,7 +6,7 @@ class ItemsController < ApplicationController
   # GET /items
   # GET /items.json
   def index
-    @items = Item.all
+    @items = Item.search(params[:search]).page(params[:page]).per(40)
   end
 
   # GET /items/spreadsheet
