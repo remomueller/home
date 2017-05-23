@@ -30,3 +30,7 @@ Style/MutableConstant:
 Style/StringLiterals:
   Enabled: true
   EnforcedStyle: double_quotes
+
+# Allow symbol arrays.
+Style/SymbolArray:
+  Enabled: false

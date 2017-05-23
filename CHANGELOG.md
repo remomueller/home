@@ -1,6 +1,8 @@
 ## 1.0.0
 
 ### Enhancements
+- **Box Changes**
+  - Boxes can now be described, opened, and closed
 - **Item Changes**
   - Items can now be created on a spreadsheet
     - `box`: The current box they are in
@@ -12,3 +14,4 @@
 - **Gem Changes**
   - Updated to rails 5.1.1
   - Updated to haml 5.0.1
+  - Updated to kaminari 1.0.1

@@ -1,0 +1,28 @@
+%h1.display-3
+  Boxes
+
+%p= link_to "New Box", new_box_path, class: "btn btn-secondary"
+
+%table.table
+  %thead
+    %tr
+      %th Name
+      %th Description
+      %th.center Closed
+      %th.center Actions
+
+  %tbody
+    - @boxes.each do |box|
+      %tr
+        %td= link_to box.name, box
+        %td= box.description
+        %td.center
+          - if box.closed?
+            Closed
+          - else
+            Open
+        %td.center.nowrap
+          = link_to "Edit", edit_box_path(box), class: "btn btn-sm btn-secondary"
+          = link_to "Delete", box, method: :delete, data: { confirm: "Delete Box #{box.name}?" }, class: "btn btn-sm btn-outline-danger"
+
+.center= paginate @boxes, theme: "bootstrap"

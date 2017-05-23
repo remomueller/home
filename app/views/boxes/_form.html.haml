@@ -1,0 +1,19 @@
+= form_with(model: box, local: true) do |form|
+  .form-group
+    = form.label :name
+    = form.text_field :name, id: :box_name, class: "form-control"
+    = render "layouts/errors", object: box, key: :name
+
+  .form-group
+    = form.label :description
+    = form.text_area :description, id: :box_description, class: "form-control", rows: 3
+    = render "layouts/errors", object: box, key: :description
+
+  .form-check
+    = form.label :closed, class: "form-check-label" do
+      = form.check_box :closed, id: :box_closed, class: "form-check-input"
+      Closed
+    = render "layouts/errors", object: box, key: :closed
+
+  = form.submit class: "btn btn-primary"
+  = link_to 'cancel', box.new_record? ? boxes_path : box, class: "btn btn-link"

@@ -1,0 +1,19 @@
+one:
+  name: A1
+  description: Coat closet.
+  closed: false
+
+two:
+  name: B1
+  description: Book shelf items.
+  closed: false
+
+closed:
+  name: C1
+  description: Kitchen utensils.
+  closed: true
+
+open:
+  name: C2
+  description: More kitchen utensils.
+  closed: false

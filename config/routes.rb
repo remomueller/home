@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :boxes
   root 'items#spreadsheet'
 
   resources :items do
